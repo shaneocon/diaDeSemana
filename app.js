@@ -1,3 +1,10 @@
+//----------------- VARIABLES ------------------// 
+
+var hourSpan;
+var userInput;
+// ----------------------------------//
+
+
 $(function () {
     //Adds current day to currentDay Head
     var currentdayEl = $("#currentDay");
@@ -34,4 +41,19 @@ $(function () {
     console.log(moment().format('k'));
     console.log(currentHourTime);
     console.log(typeof(currentHourTime));
-});
+
+
+
+
+    //-------- SAVE BUTTON FUNCTION --------------- //
+
+    $(".saveBtn").on("click", function() {
+        userInput = $(this).siblings(".description").val().trim();
+        console.log(userInput);
+        hourSpan = $(this).siblings(".hour").text().trim();
+        console.log(hourSpan);
+        localStorage.setItem(hourSpan, JSON.stringify(userInput));
+    })
+
+
+})
