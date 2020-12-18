@@ -39,8 +39,8 @@
 - var fourPm = $("#16pm");
 - var fivePm = $("#17pm");
 
-var hourSpan;
-var userInput;
+- var hourSpan;
+- var userInput;
 
 # Summary Description
 
