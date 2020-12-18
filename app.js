@@ -35,6 +35,7 @@ $(function () {
     // --- RETRIEVING FROM LOCAL STORAGE AND DISPLAYING IN CORRESPONDING TIME SLOT ----- // 
                  
     function initPage() {
+
         var init9 = JSON.parse(localStorage.getItem("9AM"));
         nineAm.val(init9);
 
@@ -63,13 +64,8 @@ $(function () {
         fivePm.val(init17);
 
     }
+
     initPage()
-
-
-
-
-
-
 
     //-------- SAVE BUTTON FUNCTION --------------- //
     $(".saveBtn").on("click", function () {
