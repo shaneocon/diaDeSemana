@@ -22,18 +22,19 @@ $(function () {
     //Change color
     for (var hourCount = 9; hourCount < 18; hourCount++) {
         var hourgrabEl = $("#hour-" + hourCount);
-        if(hourCount < currentHourTime) {
-            hourgrabEl.attr("class","row time-block past");
+        if (hourCount < currentHourTime) {
+            hourgrabEl.attr("class", "row time-block past");
         }
-        else if(hourCount === currentHourTime) {
-            hourgrabEl.attr("class","row time-block present");
+        else if (hourCount === currentHourTime) {
+            hourgrabEl.attr("class", "row time-block present");
         }
         else {
-            hourgrabEl.attr("class","row time-block future");
+            hourgrabEl.attr("class", "row time-block future");
         }
     }
-
-    function initPage(){
+    // --- RETRIEVING FROM LOCAL STORAGE AND DISPLAYING IN CORRESPONDING TIME SLOT ----- // 
+                 
+    function initPage() {
         var init9 = JSON.parse(localStorage.getItem("9AM"));
         nineAm.val(init9);
 
@@ -64,23 +65,25 @@ $(function () {
     }
     initPage()
 
-    
-    console.log(moment().format('k'));
-    console.log(currentHourTime);
-    console.log(typeof(currentHourTime));
+
+
 
 
 
 
     //-------- SAVE BUTTON FUNCTION --------------- //
-    $(".saveBtn").on("click", function() {
+    $(".saveBtn").on("click", function () {
         userInput = $(this).siblings(".description").val().trim();
         console.log(userInput);
         hourSpan = $(this).siblings(".hour").text().trim();
         console.log(hourSpan);
         localStorage.setItem(hourSpan, JSON.stringify(userInput));
     })
-    
+
+    // ------- CLEAR BUTTON FOR THE DAY ---------//
+
+
+
 
 
 })
