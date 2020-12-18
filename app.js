@@ -1,4 +1,13 @@
 //----------------- VARIABLES ------------------// 
+var nineAm = $("#9am");
+var tenAm = $("#10am");
+var elevenAm = $("#11am");
+var twelvePm = $("#12pm");
+var onePm = $("#13pm");
+var twoPm = $("#14pm");
+var threePm = $("#15pm");
+var fourPm = $("#16pm");
+var fivePm = $("#17pm");
 
 var hourSpan;
 var userInput;
@@ -23,21 +32,39 @@ $(function () {
             hourgrabEl.attr("class","row time-block future");
         }
     }
-    // var descriptionArray = [{hour: ??, description: ?? }];
-    // $(".saveBtn").on("click", function() {
-    //     var tempString = $(this.previousElementSibling).val();
-    //     console.log(tempString);
-    //     var hourTemp = $(this.parentElement).i
-    //     localStorage.setItem("description", JSON.stringify(tempString));
-    // })
-    // function init() {
-    //     var storedHighscores = JSON.parse(localStorage.getItem("highscores"));
-    //     if (storedHighscores !== null) {
-    //         highscores = storedHighscores;
-    //     }
-    // }
-    function storeDescriptions() {
+
+    function initPage(){
+        var init9 = JSON.parse(localStorage.getItem("9AM"));
+        nineAm.val(init9);
+
+        var init10 = JSON.parse(localStorage.getItem("10AM"));
+        tenAm.val(init10);
+
+        var init11 = JSON.parse(localStorage.getItem("11AM"));
+        elevenAm.val(init11);
+
+        var init12 = JSON.parse(localStorage.getItem("12PM"));
+        twelvePm.val(init12);
+
+        var init13 = JSON.parse(localStorage.getItem("1PM"));
+        onePm.val(init13);
+
+        var init14 = JSON.parse(localStorage.getItem("2PM"));
+        twoPm.val(init14);
+
+        var init15 = JSON.parse(localStorage.getItem("3PM"));
+        threePm.val(init15);
+
+        var init16 = JSON.parse(localStorage.getItem("4PM"));
+        fourPm.val(init16);
+
+        var init17 = JSON.parse(localStorage.getItem("5PM"));
+        fivePm.val(init17);
+
     }
+    initPage()
+
+    
     console.log(moment().format('k'));
     console.log(currentHourTime);
     console.log(typeof(currentHourTime));
@@ -46,7 +73,6 @@ $(function () {
 
 
     //-------- SAVE BUTTON FUNCTION --------------- //
-
     $(".saveBtn").on("click", function() {
         userInput = $(this).siblings(".description").val().trim();
         console.log(userInput);
@@ -54,6 +80,8 @@ $(function () {
         console.log(hourSpan);
         localStorage.setItem(hourSpan, JSON.stringify(userInput));
     })
+    
 
 
 })
+
