@@ -13,13 +13,14 @@ var hourSpan;
 var userInput;
 // ----------------------------------//
 
-
+// -------------- "Global" Function -----------//
 $(function () {
-    //Adds current day to currentDay Head
+    //---------Adds current day to currentDay Head----------//
     var currentdayEl = $("#currentDay");
     currentdayEl.text(moment().format("MMMM Do YYYY, h:mm a"));
     var currentHourTime = parseInt(moment().format('k'));
-    //Change color
+    
+    //----------------Change color-----------------//
     for (var hourCount = 9; hourCount < 18; hourCount++) {
         var hourgrabEl = $("#hour-" + hourCount);
         if (hourCount < currentHourTime) {
