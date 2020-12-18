@@ -80,8 +80,11 @@ $(function () {
         localStorage.setItem(hourSpan, JSON.stringify(userInput));
     })
 
-    // ------- CLEAR BUTTON FOR THE DAY ---------//
-
+    //------- CLEAR BUTTON FOR THE DAY ---------//
+        $("#clear").on("click", function(){
+            localStorage.clear();
+            initPage()
+        })
 
 
 
