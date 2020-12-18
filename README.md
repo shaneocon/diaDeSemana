@@ -44,7 +44,7 @@
 
 # Summary Description
 
-This assignment was yet another tricky one but I was able to get around it and figure it out thanks to the help of my classmates and instructor.  Since there are so few of us, we were able to form study groups this week that I think will prove more and more useful with each unit.
+This assignment was yet another tricky one but I was able to get around it and figure it out thanks to the help of my classmates and instructor.  We were able to form study groups this week that I think will prove more and more useful with each unit.
 
 The app works great, saves user input to localStorage upon the click of the save button for the corresponding hour and displays that info upon reloading.  
 
